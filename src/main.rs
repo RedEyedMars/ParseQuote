@@ -61,7 +61,7 @@ impl QuoteData {
         Ok(())
     }
 }
-
+//Function for only printing the packets as they come in, with no reordering
 fn only_print(
     _list: &mut LinkedList<QuotePacket>,
     pkt: QuotePacket,
@@ -70,6 +70,7 @@ fn only_print(
     pkt.print(out)?;
     Ok(())
 }
+//Reorders the packets based on the accept time, using a linked list
 fn print_and_reorder(
     list: &mut LinkedList<QuotePacket>,
     pkt: QuotePacket,
