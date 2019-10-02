@@ -1,0 +1,11 @@
+[package]
+name = "parse-quote"
+version = "0.1.0"
+authors = ["RedEyedMars <redeyedmars@gmail.com>"]
+edition = "2018"
+
+
+[dependencies]
+failure = "0.1.5"
+chrono = "0.4.9"
+linked-list = "0.0.3"
