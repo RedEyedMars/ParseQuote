@@ -256,6 +256,7 @@ fn packet_header(
         })
     }
 }
+
 //Prints all the quotes
 fn print_quote(
     f: &mut File,
