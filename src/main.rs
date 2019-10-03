@@ -80,7 +80,9 @@ fn print_and_reorder(
         list.push_front(pkt);
         return Ok(());
     } else {
-        if list.front().unwrap().pkt_sec < pkt.pkt_sec - 3u32 {
+        if (list.front().unwrap().pkt_sec % 3600) * 1000 + list.front().unwrap().pkt_usec
+            < (pkt.pkt_sec % 3600) * 1000 + pkt.pkt_usec - 3000u32
+        {
             list.pop_front().unwrap().print(out)?;
             if list.is_empty() {
                 list.push_front(pkt);
